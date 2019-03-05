@@ -1,9 +1,0 @@
-'use strict';
-
-//= _dev.js
-
-window.onload = function() {
-  import * as table from 'table00';
-
-
-}
