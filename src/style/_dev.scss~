@@ -1,0 +1,52 @@
+$blue: #5363db;
+$blue2:#5b6ceb;
+$blue3:#606ce7;
+$gray: #555;
+$c777: #777;
+$c888: #888;
+$c999: #999;
+$white: #fff;
+$h : 12.5rem;
+
+/*#bug{	*/
+	//@include debug(rgba(0, 0, 0, 0.2), 1px solid #ff0);	
+/*}*/
+
+@mixin q {
+	border:1px solid red;
+}
+
+@mixin w {
+	border:1px solid blue;
+}
+
+@mixin e(){
+	border:5px solid red;
+}
+
+@mixin t(){
+	border:5px solid green;
+}
+
+#windowSize{
+	//@include wrapper;
+	z-index: 5;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	color: purple;
+	font-size: 1.5rem;
+
+	/*@include lg-block {*/
+		//background: tan;
+	//}
+	//@include md-block {
+		//background: pink;
+	//}
+	//@include sm-block {
+		//background: yellow;
+	//}
+	//@include xs-block {
+		//background: orange;
+	/*}*/
+}
