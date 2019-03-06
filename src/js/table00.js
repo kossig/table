@@ -1,24 +1,19 @@
 /* global document */
-let htmlBox = document.querySelector('.wr');
-let table00 = document.createElement('table');
-htmlBox.appendChild(table00);
 
-let rowTable00 = [
-  'Table Name',
-  'Stake',
-  'Limit',
-  'Players',
-  'Wait',
-  'Known',
-  'AvgPot',
-  'Pir/FLP',
-  'H/hr',
-  'Vpip'
-];
-
-let tableItems = 10;
-
-let tableItem = {
+let numElementsTable00 = 10,
+namesColumnsTable00 = [
+'Table Name',
+'Stake',
+'Limit',
+'Players',
+'Wait',
+'Known',
+'AvgPot',
+'Pir/FLP',
+'H/hr',
+'Vpip'
+],
+elemTable00 = {
   name : 'Sylvania',
   stake: '0.25/0.50',
   limit: 'No Limit',
@@ -31,27 +26,28 @@ let tableItem = {
   vpip: NaN
 };
 
+let table00 = document.createElement('table');
+document.querySelector('.wr').appendChild(table00);
 
-let rowItem = document.createElement('tr');
-rowTable00.forEach(function (el){
+let tr = document.createElement('tr');
 
-let td = document.createElement('td');
+namesColumnsTable00.forEach(function (el){
+  let td = document.createElement('td');
   td.innerHTML = el;
-  rowItem.appendChild(td);
+  tr.appendChild(td);
 });
 
-    table00.appendChild(rowItem);
-for(let i = 0; i < tableItems; i++){
+table00.appendChild(tr);
 
-let rowItem = document.createElement('tr');
+for(let i = 0; i < numElementsTable00; i++){
+  let row = document.createElement('tr');
 
-    for(let key in tableItem){
+  for(let key in elemTable00){
+    let td = document.createElement('td');
+    td.innerHTML = elemTable00[key];
+    row.appendChild(td);
+  }
 
-let td = document.createElement('td');
-      td.innerHTML = tableItem[key];
-      rowItem.appendChild(td);
-    }
-
-    table00.appendChild(rowItem);
+  table00.appendChild(row);
 }
 
